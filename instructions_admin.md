@@ -354,6 +354,7 @@ scontrol  create reservation=pasteur nodes=c3 user=bench1 start=now duration=03:
 Vérifier la reservation
 ```
 sinfo -T
+sinfo                                # noter le statut du noeud réservé
 scontrol show reservation=pasteur
 ```
 
@@ -392,7 +393,7 @@ sacct_ -X -u bench1 -S 2024-04-22
 
 Obtenir les jobs été exécutés sur c[1-2] entre des dates spécifiques
 ```
-sacct_ -X -N c[1-2] -S 2024-04-22T10:30:00  -E 2024-04-22T12:42:00
+sacct_ -X -N c[1-2] -S 2024-04-22T12:30:00  -E 2024-04-22T16:42:00
 ```
 
 Obtenir les jobs qui ont été exécutés sur 2 nœuds au cours du mois d’avril
